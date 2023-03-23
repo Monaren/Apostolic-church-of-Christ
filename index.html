@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostolic Church of Christ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div id="hero">
+        <div class="navbar">
+            <img src="images/download.jpeg" class="logo">
+            <div class="user">
+                <button class="cn"><a href="https://www.google.com/search?q=stage+66+pub&rlz=1C1CHBF_enZA1028ZA1029&oq=Stag&aqs=chrome.0.69i59j69i57j35i39j46i131i199i433i465i512l2j0i131i433i512j69i60j69i61.7509j0j7&sourceid=chrome&ie=UTF-8#">LOCATION</a></button><a href=""></a>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="info">
+                <h1><b>Apostolic <br>Church <br>of Christ</b></h1><br><br>
+                <h3>6768 Stinkwater<br><font color="orangered">Langazela Street</font><br>Hammanskraal<br><font color="orangered">0400</font></h3><br>
+                <p>Saturday and Sunday:<br><br> 11am - 3pm</p>
+                
+            </div>
+        </div>
+
+        <div class="slider">
+            <img src="images/Back arrow.jpeg" id="prev">
+            <div class="preview">
+                <img src="images/20230318_125758 (2).jpg" class="active thumbnail">
+                <img src="images/20230318_130051.jpg" class="active thumbnail">
+            </div>
+            <img src="images/Back arrow - Copy.jpeg" id="next">
+        </div>
+        
+    </div>
+
+    <script>
+
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var thumbnail = document.getElementsByClassName("thumbnail");
+        var hero = document.getElementById("hero");
+
+        var backgroundImg = new Array (
+            "images/download.jpeg",
+            "images/20230318_130051.jpg",
+            "images/20230318_125758 (2).jpg",
+        );
+        let i = 0;
+        next.onclick = function(){
+
+            if(i < 4){
+                hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+                thumbnail[i+1].classList.add("active");
+                thumbnail[i].classList.remove("active");
+                i++;
+            }
+            
+        }
+        prev.onclick = function(){
+
+            if(i > 0){
+                hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+                thumbnail[i-1].classList.add("active");
+                thumbnail[i].classList.remove("active");
+                i--;
+            }
+            
+        }
+        
+
+
+    </script>
+
+</body>
+</html>
